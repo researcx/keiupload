@@ -1,0 +1,10 @@
+{
+    "Name": "My Site Upload",
+    "RequestType": "POST",
+    "RequestURL": "http://0.0.0.0:9900/u",
+    "FileFormName": "file",
+    "Arguments": {
+      "auth": ""
+    },
+    "ResponseType": "Text"
+}

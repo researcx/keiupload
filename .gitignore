@@ -1,0 +1,9 @@
+__pycache__/*
+/static/*
+.DS_Store
+Thumbs.db
+ehthumbs.db
+ehthumbs_vista.db
+Desktop.ini
+$RECYCLE.BIN/
+._*
