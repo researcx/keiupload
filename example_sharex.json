@@ -4,7 +4,9 @@
     "RequestURL": "http://0.0.0.0:9900/u",
     "FileFormName": "file",
     "Arguments": {
-      "auth": ""
+      "randomize_filename": "1",
+      "path": "example_path",
+      "keep_exif": "0"
     },
     "ResponseType": "Text"
 }

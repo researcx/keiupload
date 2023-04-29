@@ -29,7 +29,7 @@ def do_upload():
 
             if request.values.get('randomize_filename') and request.values.get('randomize_filename') is '1':
                 f_name, f_ext = os.path.splitext(os.path.basename(filename).split("/")[-1])
-                filename = ''.join(random.sample("-_"+string.ascii_uppercase+string.ascii_lowercase+string.digits,20)) + '.' + f_name + f_ext
+                filename = ''.join(random.sample("-_"+string.ascii_uppercase+string.ascii_lowercase+string.digits,20)) + '.' + f_ext
 
             if request.values.get('path'):
                 folder_subpath = ""
@@ -44,7 +44,7 @@ def do_upload():
 
             file.save(os.path.join(upload_folder, filename))
 
-            if not request.values.get('keep_exif'):
+            if not (request.values.get('keep_exif') and request.values.get('keep_exif') is '1'):
                 if extension in exif_remove_types:
                     piexif.remove(upload_folder + filename)
 
